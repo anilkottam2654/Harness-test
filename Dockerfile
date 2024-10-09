@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go app
-RUN go build -o myapp
+RUN go build -o myapp -buildvcs=false
 
 # Step 2: Build a small image with just the Go binary
 FROM alpine:latest
